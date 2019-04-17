@@ -1,6 +1,8 @@
 import React,  {useState} from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { Droppable } from 'react-drag-and-drop'
+import logoPlus from '../pictures/plus.png'
+import logoMinus from '../pictures/minus.png'
 
 
 const MyModalComponent = () => {
@@ -58,18 +60,18 @@ const MyModalComponent = () => {
 
   return (
     <div>
-        <h1>Tvs</h1>
         <center>
+        <h1>Tvs</h1>
           <div className="list">
-          {data.map(el => <Droppable onDragEnter={onHoverItem} onClick={item} id={el.name} className={el.class} key={el.name} types={['item']} onDrop={onDrop}>{el.name}</Droppable>)}
+          {data.map(el => <Droppable onDragEnter={onHoverItem} onClick={item} id={el.name} className={el.class} key={el.name} types={['item']} onDrop={onDrop}><span className="glyphicon glyphicon-align-left" aria-hidden="true"></span>{el.name}</Droppable>)}
           </div>
         </center>
         <div className="row buttons  ">
           <div className="col left">
-            <Button color="success" onClick={toggle}> + </Button>
+            <Button color="success" onClick={toggle}><img src={logoPlus} width="50"></img></Button>
           </div>
           <div className="col right">
-            <Button color="danger" onClick={remove}> - </Button>
+            <Button color="danger" onClick={remove}><img src={logoMinus} width="50"></img></Button>
           </div>
         </div>
         <Modal isOpen={modal}>

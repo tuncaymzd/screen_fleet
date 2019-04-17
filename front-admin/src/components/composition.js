@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { Draggable } from 'react-drag-and-drop'
+import logoPlus from '../pictures/plus.png'
+import logoMinus from '../pictures/minus.png'
 
 const MyModalComponent = () => {
   const [modal, setModal] = useState(false);
@@ -48,18 +50,18 @@ const MyModalComponent = () => {
 
   return (
     <div>
-      <h1>Composition</h1>
       <center>
+        <h1>Composition</h1>
         <div className="list">
           {data.map(el => <Draggable id={el.name} className={el.class} onClick={item} type="item" key={el.name} data={el.name}>{el.name}</Draggable>)}
         </div>
       </center>
       <div className="row buttons ">
         <div className="col left">
-          <Button color="success" onClick={toggle}> + </Button>
+          <Button color="success" className="testic"  onClick={toggle}><img src={logoPlus} width="50"></img></Button>
         </div>
         <div className="col right">
-          <Button color="danger" onClick={remove}> - </Button>
+          <Button color="danger" onClick={remove}><img src={logoMinus} width="50"></img></Button>
         </div>
       </div>
       <Modal isOpen={modal}>

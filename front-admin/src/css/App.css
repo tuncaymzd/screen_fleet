@@ -35,11 +35,13 @@
 }
 h1{
   color: white;
+  width: 350px;
+  background: red;
 }
 
 .font{
   cursor: pointer;
-  font-size: 20px;
+  font-size: 28px;
 }
 
 .list{
@@ -48,6 +50,7 @@ h1{
   max-height: 70vh;
   overflow-y: scroll;
   width: 350px;
+  border: 10px double white;
 }
 
 .buttons {
@@ -63,9 +66,30 @@ h1{
 }
 
 .selected{
-  background: grey;
+  background: black;
+  color: white;
 }
 
 .form-control{
   min-width: 460px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white; 
 }

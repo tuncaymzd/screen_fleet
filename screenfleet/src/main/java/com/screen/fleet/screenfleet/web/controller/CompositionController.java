@@ -23,13 +23,21 @@ public class CompositionController {
     }
 
     @PutMapping
-    public void addCompositions(@RequestBody Composition composition ) {
-        this.compositionDao.insert(composition);
+    public void addCompositions(@RequestBody Composition composition ) throws Exception {
+        if (composition.isValid()){
+            this.compositionDao.insert(composition);
+        } else {
+            throw new Exception("This composition is invalid !");
+        }
     }
 
     @PostMapping
-    public void updateCompositions(@RequestBody Composition composition) {
-        this.compositionDao.save(composition);
+    public void updateCompositions(@RequestBody Composition composition) throws Exception {
+        if (composition.isValid()){
+            this.compositionDao.save(composition);
+        } else {
+            throw new Exception("This composition is invalid !");
+        }
     }
 
     @DeleteMapping("/{id}")

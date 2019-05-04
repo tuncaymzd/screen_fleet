@@ -57,4 +57,8 @@ public class Composition {
                 ", moduleTree=" + moduleTree +
                 '}';
     }
+
+    public boolean isValid() {
+        return this.moduleTree.isValid();
+    }
 }

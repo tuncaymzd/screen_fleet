@@ -33,7 +33,7 @@ namespace ScreenFliteFileService
                 options.AddPolicy(MyAllowSpecificOrigins,
                 builder =>
                 {
-                    builder.AllowAnyHeader().AllowAnyMethod();
+                    builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
                 });
             });
 

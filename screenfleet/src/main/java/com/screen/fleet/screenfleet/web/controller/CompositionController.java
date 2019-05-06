@@ -30,7 +30,6 @@ public class CompositionController {
             throw new Exception("This composition is invalid !");
         }
     }
-
     @PostMapping
     public void updateCompositions(@RequestBody Composition composition) throws Exception {
         if (composition.isValid()){

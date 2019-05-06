@@ -12,7 +12,7 @@
 	<artifactId>screenfleet</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>screenfleet</name>
-	<description>Gestion de composant</description>
+	<description>Gestion de composant Composition</description>
 
 	<properties>
 		<java.version>1.8</java.version>

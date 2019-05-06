@@ -19,18 +19,13 @@ public class Composition {
 
     }
 
-    public Composition(int id, String name, Module moduleTree) {
-        this.id = id;
+    public Composition(String name, Module moduleTree) {
         this.name = name;
         this.moduleTree = moduleTree;
     }
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {

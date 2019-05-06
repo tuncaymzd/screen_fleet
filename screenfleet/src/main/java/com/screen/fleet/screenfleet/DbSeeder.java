@@ -42,8 +42,8 @@ public class DbSeeder implements CommandLineRunner {
         LinkedList<Module> child = new LinkedList<>();
         Parameter parameter = new Parameter("horizontal",1,"https://www.google.com/picture.png");
         Module module = new Module("picture",child,parameter);
-        Composition composition = new Composition(14,"david", module);
-
+        Composition composition = new Composition("david", module);
+        this.compositionController.deleteCompositions(19);
         this.compositionController.addCompositions(composition);
     }
 

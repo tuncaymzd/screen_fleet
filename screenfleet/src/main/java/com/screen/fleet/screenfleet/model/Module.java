@@ -24,7 +24,7 @@ public class Module {
      *
      * @param type
      *             "Le type du module"
-     * @param children
+     * @param childen
      *             "La liste des modules enfants du module"
      * @param parameter
      *             "Les paramètres du module"
@@ -66,7 +66,7 @@ public class Module {
     /**
      * Modifie la valeur du "children".
      *
-     * @param children
+     * @param childen
      *             "La liste des children que l'on veut donner au Module"
      */
     public void setChilden(LinkedList<Module> childen) {

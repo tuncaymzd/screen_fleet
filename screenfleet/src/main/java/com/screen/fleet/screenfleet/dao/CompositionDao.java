@@ -8,6 +8,9 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
 
+/**
+ * Interface to represent the Composition's data access object.
+ */
 public interface CompositionDao extends MongoRepository<Composition, String> {
 
     Composition findById(ObjectId id);

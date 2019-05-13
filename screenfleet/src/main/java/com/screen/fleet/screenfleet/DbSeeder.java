@@ -10,16 +10,30 @@ import org.springframework.stereotype.Component;
 
 import java.util.LinkedList;
 
+/**
+ * Class DbSeeder
+ */
 @Component
 public class DbSeeder implements CommandLineRunner {
 
     private CompositionController compositionController;
 
+    /**
+     * Constructeur avec le CompositionController
+     *
+     * @param compositionController
+     *             "Le controller de la composition"
+     */
     public DbSeeder(CompositionController compositionController) {
         this.compositionController = compositionController;
     }
 
-
+    /**
+     * Fonction qui execute des fonction propres aux compositions de façons à les tester.
+     *
+     * @param args
+     *             "Les arguments donnés en ligne de commande"
+     */
     @Override
     public void run(String... args) throws Exception {
         /*

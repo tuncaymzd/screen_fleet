@@ -1,28 +1,49 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import './css/App.css';
+import CompositionComponent from './components/composition';
+import AddResources from './components/addResources';
+import TvComponent from './components/tv';
+import Navbar from './components/navbar';
+import ListResources from './components/listResources';
+
+const composition = () => (
+  <div className="row">
+    <div className="col">
+      <CompositionComponent />
+    </div>
+    <div className="col">
+      <TvComponent />
+    </div>
+  </div>
+);
+
+const resources = () => (
+  <div className="row">
+    <div className="col">
+      <ListResources />
+    </div>
+    <div className="col">
+      <AddResources />
+    </div>
+  </div>
+);
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <div className="App App-header">
+          <div className="container">
+            <div className="sf-navbar">
+              <Navbar />
+            </div>
+            <Route exact path="/" component={composition} />
+            <Route exact path="/resources" component={resources} />
+          </div>
+        </div>
+      </Router>
     );
   }
 }
-
-export default App;
+export default App

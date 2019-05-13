@@ -1,0 +1,139 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  padding-top: 10px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#div1 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+h1{
+  color: white;
+  width: 350px;
+  background: red;
+}
+
+.font{
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.fontResource{
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.fontResource:hover{
+  color: white;
+  background: black;
+}
+
+.list{
+  background: white;
+  min-height: 70vh;
+  max-height: 70vh;
+  overflow-y: scroll;
+  width: 350px;
+  border: 10px double white;
+}
+
+.listComposition{
+  background: white;
+  min-height: 70vh;
+  max-height: 70vh;
+  overflow-y: scroll;
+  width: 350px;
+  border: 10px double white;
+  text-align: right;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.left{
+  margin-left: 20%;
+}
+
+.right{
+  margin-right: 20%;
+}
+
+.selected{
+  background: black;
+  color: white;
+}
+
+.form-control{
+  min-width: 460px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white; 
+}
+
+.sf-navbar{
+  padding-bottom: 20px;
+}
+
+.pictureModal{
+width: 100%;
+}
+
+.chooseFile{
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.btnValidate{
+  width: 60%;
+    height: 54px;
+    font-size: 23px !important;
+}
+
+.floatLeft{
+  float: left;
+}

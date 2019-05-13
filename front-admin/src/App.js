@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import './css/App.css';
 import CompositionComponent from './components/composition';
 import AddResources from './components/addResources';
@@ -29,16 +29,21 @@ const resources = () => (
   </div>
 );
 
-export default () => (
-  <Router>
-    <div className="App App-header">
-      <div className="container">
-        <div className="sf-navbar">
-          <Navbar />
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div className="App App-header">
+          <div className="container">
+            <div className="sf-navbar">
+              <Navbar />
+            </div>
+            <Route exact path="/" component={composition} />
+            <Route exact path="/resources" component={resources} />
+          </div>
         </div>
-        <Route exact path="/" component={composition} />
-        <Route exact path="/resources" component={resources} />
-      </div>
-    </div>
-  </Router>
-);
+      </Router>
+    );
+  }
+}
+export default App

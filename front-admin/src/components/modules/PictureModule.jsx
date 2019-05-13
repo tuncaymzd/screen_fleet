@@ -2,8 +2,6 @@ import React from 'react';
 
 import './PictureModule.scss';
 
-export default ({ url }) => {
-    return (
-        <div className="module-picture" style={{ backgroundImage: `url(${url})` }} />
-    );
-};
+export default ({ url }) => (
+  <div className="module-picture" style={{ backgroundImage: `url(${url})` }} />
+);

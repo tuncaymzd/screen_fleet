@@ -4,6 +4,6 @@ import Module from './Module';
 
 import './Root.scss';
 
-export default ({ module }) => (
-    <Module module={module} />
+export default ({ moduleTree }) => (
+  <Module module={moduleTree} />
 );

@@ -31,7 +31,7 @@ namespace ScreenFliteFileService.Controllers
             await Task.CompletedTask;
             string path = Path.Combine(GetFolderPath(SpecialFolder.Desktop), $"{_folder}{Path.DirectorySeparatorChar}{fileName}");
             if (!System.IO.File.Exists(path))
-                return NotFound();
+                return NotFound(); 
             return File(System.IO.File.ReadAllBytes(path), "application/force-download", fileName);
         }
 

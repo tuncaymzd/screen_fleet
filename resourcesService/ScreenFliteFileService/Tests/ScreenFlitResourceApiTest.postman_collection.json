@@ -1,0 +1,43 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ScreenFlitResourceApiTest",
+		"_postman_id": "f2c99979-302a-1056-b220-6e38d67ae7a9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44396/api/ScreenFiles/getResource",
+			"request": {
+				"url": "https://localhost:44396/api/ScreenFiles/getResource",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Test get request to resources present in the server from the API controller"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44396/api/ScreenFiles/upload",
+			"request": {
+				"url": "https://localhost:44396/api/ScreenFiles/upload",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"description": "Test to post files to a postman collection."
+			},
+			"response": []
+		}
+	]
+}

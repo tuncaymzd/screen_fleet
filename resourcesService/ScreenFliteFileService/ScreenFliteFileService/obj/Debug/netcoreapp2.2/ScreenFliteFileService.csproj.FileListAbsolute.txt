@@ -26,3 +26,11 @@ C:\Users\Damien Doumer\Desktop\ScreenFlitFileService\ScreenFliteFileService\Scre
 C:\Users\Damien Doumer\Desktop\ScreenFlitFileService\ScreenFliteFileService\ScreenFliteFileService\obj\Debug\netcoreapp2.2\ScreenFliteFileService.RazorTargetAssemblyInfo.cache
 C:\Users\Damien Doumer\Desktop\ScreenFlitFileService\ScreenFliteFileService\ScreenFliteFileService\obj\Debug\netcoreapp2.2\ScreenFliteFileService.dll
 C:\Users\Damien Doumer\Desktop\ScreenFlitFileService\ScreenFliteFileService\ScreenFliteFileService\obj\Debug\netcoreapp2.2\ScreenFliteFileService.pdb
+C:\Users\Damien Doumer\Desktop\ScreenFlitFileService\ScreenFlit\screen_fleet\resourcesService\ScreenFliteFileService\ScreenFliteFileService\obj\Debug\netcoreapp2.2\ScreenFliteFileService.csprojAssemblyReference.cache
+C:\Users\Damien Doumer\Desktop\ScreenFlitFileService\ScreenFlit\screen_fleet\resourcesService\ScreenFliteFileService\ScreenFliteFileService\obj\Debug\netcoreapp2.2\ScreenFliteFileService.csproj.CoreCompileInputs.cache
+C:\Users\Damien Doumer\Desktop\ScreenFlitFileService\ScreenFlit\screen_fleet\resourcesService\ScreenFliteFileService\ScreenFliteFileService\obj\Debug\netcoreapp2.2\ScreenFliteFileService.RazorAssemblyInfo.cache
+C:\Users\Damien Doumer\Desktop\ScreenFlitFileService\ScreenFlit\screen_fleet\resourcesService\ScreenFliteFileService\ScreenFliteFileService\obj\Debug\netcoreapp2.2\ScreenFliteFileService.RazorAssemblyInfo.cs
+C:\Users\Damien Doumer\Desktop\ScreenFlitFileService\ScreenFlit\screen_fleet\resourcesService\ScreenFliteFileService\ScreenFliteFileService\obj\Debug\netcoreapp2.2\ScreenFliteFileService.AssemblyInfoInputs.cache
+C:\Users\Damien Doumer\Desktop\ScreenFlitFileService\ScreenFlit\screen_fleet\resourcesService\ScreenFliteFileService\ScreenFliteFileService\obj\Debug\netcoreapp2.2\ScreenFliteFileService.AssemblyInfo.cs
+C:\Users\Damien Doumer\Desktop\ScreenFlitFileService\ScreenFlit\screen_fleet\resourcesService\ScreenFliteFileService\ScreenFliteFileService\obj\Debug\netcoreapp2.2\ScreenFliteFileService.dll
+C:\Users\Damien Doumer\Desktop\ScreenFlitFileService\ScreenFlit\screen_fleet\resourcesService\ScreenFliteFileService\ScreenFliteFileService\obj\Debug\netcoreapp2.2\ScreenFliteFileService.pdb

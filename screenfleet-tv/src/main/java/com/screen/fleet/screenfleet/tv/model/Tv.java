@@ -10,7 +10,6 @@ import javax.persistence.Id;
 public class Tv {
 
     @Id
-    @GeneratedValue
     private int id;
 
     private String name;
@@ -19,6 +18,7 @@ public class Tv {
     public Tv(String name, int compositionId) {
         this.name = name;
         this.compositionId = compositionId;
+        this.id = (int) Math.random() * 1000000;
     }
 
     public Tv() {

@@ -12,7 +12,6 @@ import javax.persistence.Id;
 public class Composition {
 
     @Id
-    @GeneratedValue
     private int id;
 
     private String name;
@@ -36,6 +35,7 @@ public class Composition {
     public Composition(String name, Module moduleTree) {
         this.name = name;
         this.moduleTree = moduleTree;
+        this.id = (int) Math.random() * 1000000;
     }
 
     /**

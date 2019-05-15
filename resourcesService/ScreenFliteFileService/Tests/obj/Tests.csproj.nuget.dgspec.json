@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Damien Doumer\\Desktop\\ScreenFlitFileService\\ScreenFlit\\screen_fleet\\resourcesService\\ScreenFliteFileService\\ScreenFliteFileService\\ScreenFliteFileService.csproj": {}
+    "C:\\Users\\Damien Doumer\\Desktop\\ScreenFlitFileService\\ScreenFlit\\screen_fleet\\resourcesService\\ScreenFliteFileService\\Tests\\Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Damien Doumer\\Desktop\\ScreenFlitFileService\\ScreenFlit\\screen_fleet\\resourcesService\\ScreenFliteFileService\\ScreenFliteFileService\\ScreenFliteFileService.csproj": {
+    "C:\\Users\\Damien Doumer\\Desktop\\ScreenFlitFileService\\ScreenFlit\\screen_fleet\\resourcesService\\ScreenFliteFileService\\Tests\\Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Damien Doumer\\Desktop\\ScreenFlitFileService\\ScreenFlit\\screen_fleet\\resourcesService\\ScreenFliteFileService\\ScreenFliteFileService\\ScreenFliteFileService.csproj",
-        "projectName": "ScreenFliteFileService",
-        "projectPath": "C:\\Users\\Damien Doumer\\Desktop\\ScreenFlitFileService\\ScreenFlit\\screen_fleet\\resourcesService\\ScreenFliteFileService\\ScreenFliteFileService\\ScreenFliteFileService.csproj",
+        "projectUniqueName": "C:\\Users\\Damien Doumer\\Desktop\\ScreenFlitFileService\\ScreenFlit\\screen_fleet\\resourcesService\\ScreenFliteFileService\\Tests\\Tests.csproj",
+        "projectName": "Tests",
+        "projectPath": "C:\\Users\\Damien Doumer\\Desktop\\ScreenFlitFileService\\ScreenFlit\\screen_fleet\\resourcesService\\ScreenFliteFileService\\Tests\\Tests.csproj",
         "packagesPath": "C:\\Users\\Damien Doumer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Damien Doumer\\Desktop\\ScreenFlitFileService\\ScreenFlit\\screen_fleet\\resourcesService\\ScreenFliteFileService\\ScreenFliteFileService\\obj\\",
+        "outputPath": "C:\\Users\\Damien Doumer\\Desktop\\ScreenFlitFileService\\ScreenFlit\\screen_fleet\\resourcesService\\ScreenFliteFileService\\Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\ProgramData\\Xamarin\\NuGet\\",
@@ -43,22 +43,23 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
-            "Microsoft.AspNetCore.App": {
-              "suppressParent": "All",
+            "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.AspNetCore.Razor.Design": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[15.9.0, )"
             },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "nunit": {
+              "target": "Package",
+              "version": "[3.11.0, )"
             }
           },
           "imports": [

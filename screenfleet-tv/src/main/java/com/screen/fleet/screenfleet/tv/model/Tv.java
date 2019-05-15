@@ -18,7 +18,7 @@ public class Tv {
     public Tv(String name, int compositionId) {
         this.name = name;
         this.compositionId = compositionId;
-        this.id = (int) Math.random() * 1000000;
+        this.id = (int) Math.random() * 10 * (int) Math.random() * 10000 / (int) Math.random() * 13;
     }
 
     public Tv() {

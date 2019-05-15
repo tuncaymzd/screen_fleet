@@ -35,7 +35,7 @@ public class Composition {
     public Composition(String name, Module moduleTree) {
         this.name = name;
         this.moduleTree = moduleTree;
-        this.id = (int) Math.random() * 1000000;
+        this.id = (int) Math.random() * 10 * (int) Math.random() * 10000 / (int) Math.random() * 13;
     }
 
     /**

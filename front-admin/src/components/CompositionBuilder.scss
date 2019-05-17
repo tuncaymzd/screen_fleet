@@ -1,0 +1,13 @@
+.compositionbuilder-root {
+  display: flex;
+
+  & > .compositionbuilder-moduleview {
+    width: 70%;
+    height: 100vw;
+  }
+
+  & > .compositionbuilder-moduletree {
+    width: 30%;
+    height: 100vw;
+  }
+}

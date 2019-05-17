@@ -4,29 +4,29 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.UUID;
 
 
 @Document(collection = "tv")
 public class Tv {
 
     @Id
-    private int id;
+    private String id;
 
     private String name;
-    private int compositionId;
+    private String compositionId;
 
-    public Tv(String name, int compositionId) {
+    public Tv(String name, String compositionId) {
         this.name = name;
         this.compositionId = compositionId;
-        this.id = (int) Math.random() * 10 * (int) Math.random() * 10000 / (int) Math.random() * 13;
+        this.id = UUID.randomUUID().toString();
     }
 
     public Tv() {
 
     }
 
-
-    public int getId() {
+    public String getId() {
         return id;
     }
 
@@ -38,11 +38,11 @@ public class Tv {
         this.name = name;
     }
 
-    public int getCompositionId() {
+    public String getCompositionId() {
         return compositionId;
     }
 
-    public void setCompositionId(int compositionId) {
+    public void setCompositionId(String compositionId) {
         this.compositionId = compositionId;
     }
 }

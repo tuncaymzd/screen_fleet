@@ -15,7 +15,7 @@ public interface CompositionDao extends MongoRepository<Composition, String> {
 
     Composition findById(ObjectId id);
 
-    Composition findById(int id);
+   // Composition findById(String id);
 
-    void deleteById(int id);
+    void deleteById(String id);
 }

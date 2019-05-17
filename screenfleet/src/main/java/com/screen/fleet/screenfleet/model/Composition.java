@@ -4,6 +4,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.UUID;
 
 /**
  * Class composition
@@ -12,7 +13,7 @@ import javax.persistence.Id;
 public class Composition {
 
     @Id
-    private int id;
+    private String id;
 
     private String name;
     private Module moduleTree;
@@ -20,22 +21,20 @@ public class Composition {
     /**
      * Constructeur sans argument
      */
-    public Composition(){
+    public Composition() {
 
     }
 
     /**
      * Constructeur avec le name et l'objet Module que l'on veut attribuer à la composition
      *
-     * @param name
-     *             "Le nom de la composition"
-     * @param moduleTree
-     *             "Le moduleTree représentant la composition"
+     * @param name       "Le nom de la composition"
+     * @param moduleTree "Le moduleTree représentant la composition"
      */
     public Composition(String name, Module moduleTree) {
         this.name = name;
         this.moduleTree = moduleTree;
-        this.id = (int) Math.random() * 10 * (int) Math.random() * 10000 / (int) Math.random() * 13;
+        this.id = UUID.randomUUID().toString();
     }
 
     /**
@@ -43,7 +42,7 @@ public class Composition {
      *
      * @return Le valeur de l'id sous forme d'entier.
      */
-    public int getId() {
+    public String getId() {
         return id;
     }
 
@@ -68,8 +67,7 @@ public class Composition {
     /**
      * Modifie la valeur du "name".
      *
-     * @param name
-     *             "Le name que l'on veut donner à la conmposition"
+     * @param name "Le name que l'on veut donner à la conmposition"
      */
     public void setName(String name) {
         this.name = name;
@@ -78,8 +76,7 @@ public class Composition {
     /**
      * Modifie la valeur du "moduleTree".
      *
-     * @param moduleTree
-     *             "L que l'on veut donner à la conmposition"
+     * @param moduleTree "L que l'on veut donner à la conmposition"
      */
     public void setModuleTree(Module moduleTree) {
         this.moduleTree = moduleTree;
@@ -92,11 +89,7 @@ public class Composition {
      */
     @Override
     public String toString() {
-        return "Composition{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", moduleTree=" + moduleTree +
-                '}';
+        return "Composition{" + "id=" + id + ", name='" + name + '\'' + ", moduleTree=" + moduleTree + '}';
     }
 
     /**
@@ -105,6 +98,7 @@ public class Composition {
      * @return true si le Module est valide, false dans le cas contraire.
      */
     public boolean isValid() {
+        if (this.moduleTree == null) return true;
         return this.moduleTree.isValid();
     }
 }

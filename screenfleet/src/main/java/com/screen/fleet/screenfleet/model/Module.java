@@ -1,6 +1,7 @@
 package com.screen.fleet.screenfleet.model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -9,8 +10,8 @@ import java.util.List;
  */
 public class Module {
     private String type;
-    private LinkedList<Module> childen;
-    private Parameter parameter;
+    private LinkedList<Module> children;
+    private HashMap<String, String> parameters;
 
     /**
      * Constructeur sans argument
@@ -24,15 +25,15 @@ public class Module {
      *
      * @param type
      *             "Le type du module"
-     * @param childen
+     * @param children
      *             "La liste des modules enfants du module"
-     * @param parameter
+     * @param parameters
      *             "Les paramètres du module"
      */
-    public Module(String type, LinkedList<Module> childen, Parameter parameter) {
+    public Module(String type, LinkedList<Module> children, HashMap<String, String> parameters) {
         this.type = type;
-        this.childen = childen;
-        this.parameter = parameter;
+        this.children = children;
+        this.parameters = parameters;
     }
 
     /**
@@ -59,37 +60,37 @@ public class Module {
      *
      * @return La liste des enfants du Module.
      */
-    public LinkedList<Module> getChilden() {
-        return childen;
+    public LinkedList<Module> getChildren() {
+        return children;
     }
 
     /**
      * Modifie la valeur du "children".
      *
-     * @param childen
+     * @param children
      *             "La liste des children que l'on veut donner au Module"
      */
-    public void setChilden(LinkedList<Module> childen) {
-        this.childen = childen;
+    public void setChildren(LinkedList<Module> children) {
+        this.children = children;
     }
 
     /**
-     * Retourne la valeur de "parameter".
+     * Retourne la valeur de "parameters".
      *
      * @return Les paramètres du Module.
      */
-    public Parameter getParameter() {
-        return parameter;
+    public HashMap<String, String> getParameters() {
+        return parameters;
     }
 
     /**
-     * Modifie la valeur du "parameter".
+     * Modifie la valeur du "parameters".
      *
-     * @param parameter
-     *             "Le parameter que l'on veut donner au Module"
+     * @param parameters
+     *             "Le parameters que l'on veut donner au Module"
      */
-    public void setParameter(Parameter parameter) {
-        this.parameter = parameter;
+    public void setParameters(HashMap<String, String> parameters) {
+        this.parameters = parameters;
     }
 
     /**
@@ -101,8 +102,8 @@ public class Module {
     public String toString() {
         return "Module{" +
                 "type='" + type + '\'' +
-                ", childen=" + childen +
-                ", parameter=" + parameter +
+                ", children=" + children +
+                ", parameters=" + parameters +
                 '}';
     }
 
@@ -119,8 +120,7 @@ public class Module {
         elem.add("video");
         elem.add("flux");
 
-        for (String s: elem
-             ) {
+        for (String s: elem) {
             if (this.type.toLowerCase().equals(s)){
                 return true;
             }
@@ -134,10 +134,9 @@ public class Module {
      * @return true si le module est valide, false dans le cas contraire.
      */
     public boolean isValid() {
-        if (!this.childen.isEmpty()) {
-            for (Module m : this.childen
-            ) {
-                if (!m.typeIsValid() || !m.getParameter().directionIsValid()) {
+        if (this.children != null && !this.children.isEmpty()) {
+            for (Module m : this.children) {
+                if (!m.typeIsValid()) {
                     return false;
                 }
             }

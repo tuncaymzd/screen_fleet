@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/Tv")
 public class TvController {
@@ -26,8 +27,9 @@ public class TvController {
     }
 
     @PutMapping
-    public void addTv(@RequestBody Tv tv){
-        this.tvDao.insert(tv);
+    public void addTv(@RequestBody Tv tv) {
+        Tv tmp = new Tv(tv.getName(), tv.getCompositionId());
+        this.tvDao.insert(tmp);
     }
 
     @PostMapping
@@ -36,14 +38,8 @@ public class TvController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteTv(@PathVariable("id") int id) {
+    public void deleteTv(@PathVariable("id") String id) {
         this.tvDao.deleteById(id);
     }
-
-    @GetMapping(value = "/{id}")
-    public Tv getTvById(@PathVariable("id") int id) {
-        return this.tvDao.findById(id);
-    }
-
 
 }

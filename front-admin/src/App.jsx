@@ -1,44 +1,27 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import './css/App.css';
-import CompositionComponent from './components/composition';
-import AddResources from './components/addResources';
-import TvComponent from './components/tv';
-import Navbar from './components/navbar';
-import ListResources from './components/listResources';
+import React from 'react';
 
-const composition = () => (
-  <div className="row">
-    <div className="col">
-      <CompositionComponent />
-    </div>
-    <div className="col">
-      <TvComponent />
-    </div>
-  </div>
-);
+import { DragDropContextProvider } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
+import { BrowserRouter as Router } from 'react-router-dom';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Container from '@material-ui/core/Container';
 
-const resources = () => (
-  <div className="row">
-    <div className="col">
-      <ListResources />
-    </div>
-    <div className="col">
-      <AddResources />
-    </div>
-  </div>
-);
+import Header from './components/Header';
+import AppRoutes from './AppRoutes';
+import { AppContextProvider } from './AppContext';
 
 export default () => (
-  <Router>
-    <div className="App App-header">
-      <div className="container">
-        <div className="sf-navbar">
-          <Navbar />
-        </div>
-        <Route exact path="/" component={composition} />
-        <Route exact path="/resources" component={resources} />
-      </div>
-    </div>
-  </Router>
+  <>
+    <CssBaseline />
+    <Router>
+      <DragDropContextProvider backend={HTML5Backend}>
+        <AppContextProvider>
+          <Header />
+          <Container>
+            <AppRoutes />
+          </Container>
+        </AppContextProvider>
+      </DragDropContextProvider>
+    </Router>
+  </>
 );

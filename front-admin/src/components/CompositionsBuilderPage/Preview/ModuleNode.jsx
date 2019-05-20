@@ -51,7 +51,7 @@ const ModuleNode = ({ module }) => {
         );
       case 'video':
         return (
-          <video className={classes.video}>
+          <video className={classes.video} controls>
             <source src={parameters.url} type="video/mp4" />
           </video>
         );

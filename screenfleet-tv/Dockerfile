@@ -2,7 +2,6 @@ FROM openjdk:12-jdk-alpine
 
 COPY ./src /home/java/src/
 COPY ./pom.xml /home/java
-
 WORKDIR /home/java
 
 RUN apk add maven
@@ -12,6 +11,6 @@ RUN apk del maven \
     maven-archiver maven-status surefire-reports test-classes \
     screenfleet-0.0.1-SNAPSHOT.jar.original
 
-EXPOSE 8081
+EXPOSE 8080
 
-CMD ["java", "-jar", "-Dserver.port=8081", "target/screenfleet-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "-Dserver.port=8080", "target/com.screen.fleet.screenfleet.tv-1.0-SNAPSHOT.jar"]

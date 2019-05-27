@@ -20,7 +20,7 @@ export default () => {
 
   useEffect(() => {
     fetchResources();
-  }, [fetchResources]);
+  }, []);
 
   const classes = useStyles();
 

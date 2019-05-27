@@ -1,0 +1,30 @@
+version: '3'
+services:
+        mongo:
+                image: "mongo"
+                ports:
+                        - "27017:27017"
+                networks:
+                        - backend
+        front:
+                build: "front-admin"
+                ports:
+                        - "5000:5000"
+        service-resource:
+                build: "resourcesService/ScreenFliteFileService"
+                ports:
+                        - "5001:5001"
+        service-tv:
+                build: "screenfleet-tv"
+                ports:
+                        - "8080:8080"
+                networks:
+                        - backend
+        service-composition:
+                build: "screenfleet"
+                ports:
+                        - "8090:8081"
+                networks:
+                        - backend
+networks:
+        backend:

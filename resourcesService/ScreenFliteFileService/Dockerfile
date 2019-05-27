@@ -8,6 +8,7 @@ RUN dotnet restore
 COPY ScreenFliteFileService/. ./ScreenFliteFileService/
 WORKDIR /app/ScreenFliteFileService
 RUN dotnet publish -c Release -o out
+RUN mkdir -p /app/ScreenFliteFileService/screenFlit
 
 EXPOSE 5000-5001
-ENTRYPOINT [ "dotnet", "watch", "run", "--no-restore", "--urls", "https://0.0.0.0:5000"]
+ENTRYPOINT [ "dotnet", "watch", "run", "--no-restore", "--urls", "https://0.0.0.0:5001"]

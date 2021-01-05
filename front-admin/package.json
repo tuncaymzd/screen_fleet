@@ -7,7 +7,7 @@
     "@material-ui/icons": "^4.0.0-beta.0",
     "@use-hooks/axios": "^1.2.0",
     "@use-hooks/interval": "^1.0.1",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "css-element-queries": "^1.2.0",
     "js-aspect-ratio": "^1.0.4",
     "lodash": "^4.17.11",

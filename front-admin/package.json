@@ -10,7 +10,7 @@
     "axios": "^0.18.0",
     "css-element-queries": "^1.2.0",
     "js-aspect-ratio": "^1.0.4",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "react": "^16.8.6",
     "react-dnd": "^7.4.5",
     "react-dnd-html5-backend": "^7.4.4",
